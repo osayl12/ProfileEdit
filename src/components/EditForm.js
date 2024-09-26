@@ -2,25 +2,22 @@ import React, { useState } from 'react';
 import './EditForm.css';
 
 export default function EditForm({ user, onSubmit, onClose }) {
-  // Initialize form state directly from the user prop
   const [formData, setFormData] = useState({
     name: user.name,
     address: user.address,
     image: user.image,
   });
 
-  // Handle form field changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value, // Update the respective field based on input's name attribute
+      [name]: value,
     }));
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
-    const updatedUser = { ...user, ...formData }; // Merge the original user data with updated form values
+    const updatedUser = { ...user, ...formData }; 
     onSubmit(updatedUser);
   };
 
@@ -33,7 +30,7 @@ export default function EditForm({ user, onSubmit, onClose }) {
         <input
           type="text"
           name="name"
-          value={formData.name} // Use formData for controlled input
+          value={formData.name} 
           onChange={handleChange}
         />
 
@@ -41,7 +38,7 @@ export default function EditForm({ user, onSubmit, onClose }) {
         <input
           type="text"
           name="address"
-          value={formData.address} // Use formData for controlled input
+          value={formData.address}
           onChange={handleChange}
         />
 
@@ -49,7 +46,7 @@ export default function EditForm({ user, onSubmit, onClose }) {
         <input
           type="text"
           name="image"
-          value={formData.image} // Use formData for controlled input
+          value={formData.image} 
           onChange={handleChange}
         />
 

@@ -2,7 +2,7 @@ import React from 'react';
 import './UserCard.css';
 
 export default function UserCard({ user, onClick }) {
-  const userImage = require(`../images/${user.image}`); // Dynamic image loading
+  const userImage = require(`../images/${user.image}`); 
   
   return (
     <div className="user-card" onClick={onClick}>
