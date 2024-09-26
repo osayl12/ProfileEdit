@@ -1,0 +1,49 @@
+
+
+.edit-form-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .edit-form {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .edit-form label {
+    font-weight: bold;
+  }
+  
+  .edit-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .edit-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .edit-form button[type="button"] {
+    background-color: #f44336; /* Red for cancel */
+  }
+  
+  .edit-form button:hover {
+    opacity: 0.9;
+  }
+  
